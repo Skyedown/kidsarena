@@ -1,0 +1,50 @@
+@import '../../styles/variables.less';
+
+.hero {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  color: white;
+}
+
+.hero-inner {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url('/images/arena/arena-6.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 30px;
+  height: 80vh;
+  width: 100%;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 400px;
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+@media (max-width: 1024px) {
+  .navbar-content,
+  .hero {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-inner {
+ background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url('/images/arena/arena-4.jpg') no-repeat center center;
+  background-size: cover;  }
+
+
+  
+}

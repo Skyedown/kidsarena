@@ -1,0 +1,42 @@
+@import '../../styles/variables.less';
+
+.gallery-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // Default: 4 elements per row
+  gap: 10px;
+
+  @media (max-width: 1024px) {
+    // Tablet breakpoint
+    grid-template-columns: repeat(2, 1fr); // 2 elements per row
+  }
+
+  @media (max-width: 768px) {
+    // Mobile breakpoint
+    grid-template-columns: repeat(1, 1fr); // 1 element per row
+  }
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}

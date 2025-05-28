@@ -1,0 +1,28 @@
+@import '../../styles/variables.less';
+
+.footer {
+  padding: 20px;
+  background-color: @secondary-color;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 0.7rem;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a {
+  color: @primary-color;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

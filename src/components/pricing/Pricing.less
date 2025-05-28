@@ -1,0 +1,79 @@
+@import '../../styles/variables.less';
+
+.pricing-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pricing-section h2 {
+  margin-bottom: 40px;
+}
+
+.pricing-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.pricing-item {
+  position: relative;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  color: white;
+}
+
+.pricing-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-item h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.pricing-item p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.my-3rem {
+  margin: 2rem 0;
+}
+
+.pricing-note {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  max-width: 1000px;
+  width: 90%;
+
+  strong {
+    color: @primary-color;
+  }
+
+  em {
+    font-style: italic;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pricing-section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

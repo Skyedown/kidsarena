@@ -1,0 +1,61 @@
+@import '../../styles/variables.less';
+
+.birthday-section {
+  padding: 20px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+}
+
+.birthday-intro {
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #444;
+}
+
+.birthday-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.birthday-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #000;
+  text-align: center;
+
+  h3 {
+    background-color: @secondary-color;
+    color: #fff;
+    margin: 0;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  .price {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0 20px 20px;
+    margin: 0;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.birthday-note {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
