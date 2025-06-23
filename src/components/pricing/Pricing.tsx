@@ -2,9 +2,34 @@ import './Pricing.less';
 
 const pricingItems = [
   {
+    title: 'Labková patrola nafukovací hrad',
+    price: '~ Od 150 € / deň',
+    image: '/images/paw-patrol-jump-house.jpg',
+  },
+  {
+    title: 'Šmolkovský nafukovací hrad',
+    price: '~Od 150 € / deň',
+    image: '/images/mushroom-house.jpg',
+  },
+  {
+    title: 'Nafukovací terč',
+    price: '~Od 180 € / deň',
+    image: '/images/darts.png',
+  },
+  {
+    title: 'Mini bungee trampolína',
+    price: 'Cena dohodou',
+    image: '/images/pink-bunjee.jpg',
+  },
+  {
     title: 'Skákací hrad',
     price: '~60 € / deň',
     image: '/images/castle.jpg',
+  },
+  {
+    title: 'Jednorožcový skákací hrad',
+    price: '~60 € / deň',
+    image: '/images/unicorn-house.jpg',
   },
   {
     title: 'Bubble house',
@@ -28,15 +53,17 @@ const pricingItems = [
   },
   { title: 'Šmykľavka', price: '~60 € / deň', image: '/images/slide.jpg' },
   {
+    title: 'Farebný skákací hrad so šmykľavkou',
+    price: '~50 € / deň',
+    image: '/images/jump-houses-color.jpg',
+  },
+
+  {
     title: 'Koníky na kolieskach',
     price: '~200 € / deň (iba s obsluhou)',
     image: '/images/ponny-arena.jpg',
   },
-  {
-    title: 'Šmolkovský nafukovací hrad',
-    price: '~220 € / deň (iba s obsluhou)',
-    image: '/images/mushroom-house.jpg',
-  },
+
   {
     title: 'Stroj na cukrovú vatu',
     price: 'Cena dohodou (iba s obsluhou)',
