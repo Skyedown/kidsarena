@@ -1,5 +1,20 @@
 import './Contact.less';
 
+const rentalId = import.meta.env.VITE_CALL_RENTAL_CONVERSION_EVENT_ID;
+const kidsArenaId = import.meta.env.VITE_CALL_ARENA_CONVERSION_EVENT_ID;
+
+const callRentalConversion = () => {
+  window.gtag?.('event', 'conversion', {
+    send_to: rentalId,
+  });
+};
+
+const callKidsArenaConversion = () => {
+  window.gtag?.('event', 'conversion', {
+    send_to: kidsArenaId,
+  });
+};
+
 const Contact = () => {
   return (
     <section id="contact" className="contact-section">
@@ -22,12 +37,12 @@ const Contact = () => {
             Šamorín
           </p>
           <br />
-          <p>
-            <h4>Detský kútik:</h4>{' '}
-          </p>
+          <h4>Detský kútik:</h4>{' '}
           <p>
             <strong>Telefón - </strong>{' '}
-            <a href="tel:+421903174333">0903 174 333</a>
+            <a onClick={callKidsArenaConversion} href="tel:+421903174333">
+              0903 174 333
+            </a>
           </p>
           <p>
             <strong>Rezervácia –</strong>{' '}
@@ -35,22 +50,14 @@ const Contact = () => {
               https://www.bookiopro.com/kids-arena/rs-widget?lang=sk
             </a>
           </p>
-          <p>
-            <h4>Otváracie hodiny:</h4>{' '}
-          </p>
-          <p>
-            <p>Po - Pia: 9:00 - 20:00</p>{' '}
-          </p>
-          <p>
-            <p>So - Ne: 10:00 - 20:00</p>{' '}
-          </p>
-          <br />
-          <p>
-            <h4>Prenájom atrakcií:</h4>{' '}
-          </p>
+          <h4>Otváracie hodiny:</h4> <p>Po - Pia: 9:00 - 20:00</p>{' '}
+          <p>So - Ne: 10:00 - 20:00</p> <br />
+          <h4>Prenájom atrakcií:</h4>{' '}
           <p>
             <strong>Telefón –</strong>{' '}
-            <a href="tel:+421917109235">0917 109 235</a>
+            <a onClick={callRentalConversion} href="tel:+421917109235">
+              0917 109 235
+            </a>
           </p>
           <p className="see-you">Tešíme sa na Vašu návštevu!</p>
         </div>

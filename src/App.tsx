@@ -11,6 +11,7 @@ import Footer from './components/footer/Footer';
 
 import './index.less';
 import Birthday from './components/birthday/Birthday';
+import CookieConsent from './components/cookie-consent/cookie-consent';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
       <Pricing />
       <Contact />
       <Footer />
+      <CookieConsent />
     </>
   );
 };
