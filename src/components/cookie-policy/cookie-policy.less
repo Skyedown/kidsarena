@@ -1,0 +1,83 @@
+@import '../../styles/variables.less';
+
+.cookie-policy-modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(30, 30, 30, 0.35);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie-policy-modal {
+  position: relative;
+  max-width: 85%;
+  width: 95vw;
+  height: 80vh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  padding: 40px 24px 32px 24px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #232323;
+  animation: fadeInModal 0.2s;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; transform: scale(0.96);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+.cookie-policy-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 1;
+}
+.cookie-policy-close:hover {
+  color: @primary-color;
+}
+
+.cookie-policy-modal h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: @primary-color;
+  text-align: center;
+}
+
+.cookie-policy-modal h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 10px;
+  color: #3a3a3a;
+}
+
+.cookie-policy-modal p {
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .cookie-policy-modal {
+    padding: 2rem;
+    font-size: 0.98rem;
+  }
+  .cookie-policy-modal h1 {
+    font-size: 1.3rem;
+  }
+  .cookie-policy-modal h2 {
+    font-size: 1.05rem;
+  }
+}

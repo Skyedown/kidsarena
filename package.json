@@ -13,6 +13,7 @@
     "less": "^4.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-ga4": "^2.1.0",
     "vite-plugin-style-import": "^2.0.0",
     "yet-another-react-lightbox": "^3.23.1"
   },

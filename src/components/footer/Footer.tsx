@@ -1,6 +1,10 @@
 import './Footer.less';
 
-const Footer = () => {
+type FooterProps = {
+  onPolicyShow: () => void;
+};
+
+const Footer = ({ onPolicyShow }: FooterProps) => {
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -14,6 +18,9 @@ const Footer = () => {
           >
             Peter Lehocký
           </a>
+        </span>
+        <span onClick={onPolicyShow} className="cookie-policy-link">
+          Používanie osobných údajov
         </span>
       </div>
     </footer>

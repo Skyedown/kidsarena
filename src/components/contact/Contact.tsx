@@ -1,15 +1,19 @@
 import './Contact.less';
+import { trackEvent } from '../../helpers/analytics';
+
 
 const rentalId = import.meta.env.VITE_CALL_RENTAL_CONVERSION_EVENT_ID;
 const kidsArenaId = import.meta.env.VITE_CALL_ARENA_CONVERSION_EVENT_ID;
 
 const callRentalConversion = () => {
+  trackEvent('call_click', 'contact', 'rental_phone_click');
   window.gtag?.('event', 'conversion', {
     send_to: rentalId,
   });
 };
 
 const callKidsArenaConversion = () => {
+  trackEvent('call_click', 'contact', 'arena_phone_click');
   window.gtag?.('event', 'conversion', {
     send_to: kidsArenaId,
   });
